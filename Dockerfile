@@ -2,9 +2,9 @@ FROM python:3.7
 
 # Install project
 WORKDIR /app
-RUN apt-get update && \
+RUN apt-get update -y && \
     apt-get install -y git libgl1-mesa-glx nano && \
-    git clone https://github.com/zuruoke/watermark-removal.git
+    git clone -b zuruoke https://github.com/r648r/watermark-removal.git
 
 # Setup directory
 WORKDIR /app/watermark-removal
